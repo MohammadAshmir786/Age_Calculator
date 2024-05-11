@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="flip-card">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container" id="age-calc">
+                <!-- form -->
+                <div class="calculator">
+                    <form id="form" onsubmit="return false">
+                        <div class="header">
+                            <h1>Age Calculator</h1>
+                        </div>
+                        <div id="dob_form" class="input-group">
+                            <p>Enter your Date of Birth</p>
+                            <input type="date" id="dateOfBirth">
+                        </div>
+                        <button onclick="calculateAge()">Calculate</button>
+                    </form>
+                    <div class="sign">
+                        <p><em>-- design by <b><u>Mohammad Ashmir Abbasi</u></b></em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="response">
+                <!-- Response -->
+
+                <div class="info-box">
+                    <div class="header">
+                        <h1>Your Age is</h1>
+                    </div>
+                    <div class="age">
+                        <div class="input-field">
+                            <label for="years">Years</label>
+                            <input type="text" id="years" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="months">Months</label>
+                            <input type="text" id="months" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="days">Days</label>
+                            <input type="text" id="days" disabled>
+                        </div>
+                    </div>
+                    <div id="dob">
+                        <p>for DOB <span id="dobShow"></span></p>
+                    </div>
+                    <div class="results">
+                        <div class="total-years">
+                            <p>Total Years:</p>
+                            <p id="totalYears"></p>
+                        </div>
+                        <div class="total-months">
+                            <p>Total Months:</p>
+                            <p id="totalMonths"></p>
+                        </div>
+                        <div class="total-weeks">
+                            <p>Total Weeks:</p>
+                            <p id="totalWeeks"></p>
+                        </div>
+                        <div class="total-days">
+                            <p>Total Days:</p>
+                            <p id="totalDays"></p>
+                        </div>
+                        <div class="total-hours">
+                            <p>Total Hours:</p>
+                            <p id="totalHours"></p>
+                        </div>
+                        <div class="total-minutes">
+                            <p>Total Minutes:</p>
+                            <p id="totalMinutes"></p>
+                        </div>
+                        <div class="total-seconds">
+                            <p>Total Seconds:</p>
+                            <p id="totalSeconds"></p>
+                        </div>
+                    </div>
+                    <div class="next-birthday">
+                        <p>Next Birthday</p>
+                        <p id="nextBirthday"></p>
+                    </div>
+                    <button onclick="calculateAge()">Recalculate</button>
+                    <button type="button" onclick="goback()" style="margin-left: 20px;">Go Back</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
